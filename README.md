@@ -2,7 +2,8 @@ errortrack
 ==========
 前端报错跟踪器
 
-使用UMD定义errortrack, 可作为AMD的模块使用, 也可直接使用.
+`不依赖第三方库. `  
+`使用UMD定义errortrack, 可作为AMD的模块使用, 也可直接使用.`
 
 ###How to use?
 --------
