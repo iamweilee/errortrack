@@ -22,7 +22,7 @@ errortrack
           ...
         });
 
-2. 未采用AMD定义模块使用范例:  
+2. __未__采用AMD定义模块使用范例:  
 
         window.errorTrack.init({
           // 配置错误发送的地址
