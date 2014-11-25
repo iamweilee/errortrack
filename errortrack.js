@@ -107,7 +107,8 @@
                 clickpath: clickPathList,
                 location: location.href,
                 userAgent: navigator.userAgent,
-                from: e.from || ''
+                from: e.from || '',
+                callee: arguments.callee.toString()
             };
 
             if (typeof config.captureExtendedInfo === 'function') {
