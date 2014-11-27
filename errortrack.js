@@ -109,10 +109,16 @@
                 userAgent: navigator.userAgent,
                 from: e.from || '',
                 plugins: (function(){
-                    var ret = [];
-                    baidu.object.each(navigator.plugins, function(plugin){
-                        plugin && plugin.name && ret.push(plugin.name);
-                    });
+                    var ret = [],
+                        plugins = navigator.plugins;
+                    if(plugins) {
+                        for(var i in plugins) {
+                            if(plugins.hasOwnProperty(i)) {
+                                var plugin = plugins[i];
+                                plugin.name && ret.push(plugin.name);
+                            }
+                        }
+                    }
                     return ret.join(",");
                 })()
             };
