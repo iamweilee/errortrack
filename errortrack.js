@@ -108,7 +108,13 @@
                 location: location.href,
                 userAgent: navigator.userAgent,
                 from: e.from || '',
-                callee: arguments.callee.toString()
+                plugins: (function(){
+                    var ret = [];
+                    baidu.object.each(navigator.plugins, function(plugin){
+                        plugin && plugin.name && ret.push(plugin.name);
+                    });
+                    return ret.join(",");
+                })()
             };
 
             if (typeof config.captureExtendedInfo === 'function') {
